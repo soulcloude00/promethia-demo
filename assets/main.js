@@ -57,29 +57,24 @@
 
   /* ---- Site search ---- */
   var INDEX = [
-    ["Home", "index.html", "Build · Think · Speak. Hands-on build club for Grades 1–10 in Bangalore"],
-    ["For Students", "students.html", "Build, ship every Friday, Demo Day, Makers Gr 1–5, Builders Gr 6–10"],
-    ["For Parents", "parents.html", "Outcomes, safety, screens, affordability, what your child brings home"],
-    ["Safety & safeguarding", "parents.html#safety", "POCSO-aligned policy, two-adult rule, consent, background checks, tool licences"],
-    ["Hands first, screens second", "parents.html#screens", "Paper-first, minimal screens for young children"],
-    ["Fees & affordability", "parents.html#affordability", "School-paid or sponsored models, camp fees, need-based seats"],
-    ["For Institutes (schools)", "institutes.html", "CBSE and international school partnerships, no lab capex, trained facilitators"],
-    ["What your school gets", "institutes.html#value", "Turnkey programme, measurable outcomes, parent engagement, admissions edge"],
-    ["NEP 2020 & CBSE alignment", "institutes.html#alignment", "Skill modules, Coding, AI, Design Thinking, CT & AI curriculum"],
-    ["Start a pilot", "institutes.html#pilot", "15 students, one room, 12 weeks"],
-    ["Programs", "programs.html", "Summer camp, weekly school program, domain tracks, activities"],
-    ["Summer Camp", "programs.html#summer-camp", "Six weeks, Makers and Builders tracks, Demo Day"],
-    ["Weekly School Program", "programs.html#school-program", "1–2 sessions per week, all year, in partner schools"],
-    ["8 Domain Tracks", "programs.html#tracks", "Human Intelligence, AI, Robotics, Building & Making, Design, Public Speaking, Problem Solving, Entrepreneurship"],
-    ["Activities", "programs.html#activities", "Rocketry, robotics lab, AI explorers, pitch practice, maker market and more"],
-    ["Week-by-week outline (draft)", "curriculum.html", "Spark, Toy, Care, Iterate, Tell & Grow, Demo"],
-    ["Demo Day", "students.html#demo-day", "Gallery, 90-second demos, pitches, awards"],
-    ["How it works", "index.html#how-it-works", "Wall, Story, Explore, Make, Show. Weekly ship"],
+    ["Home", "index.html", "Pilot 2026 with partner schools in Bangalore"],
+    ["Pilot 2026", "pilot.html", "Nov–Dec 2026, 30–50 Grade 5–8 students, 5–7 sessions, December showcase"],
+    ["Mind Expedition shortlisting", "pilot.html#shortlisting", "A short lab game, not an exam"],
+    ["Pilot timeline", "pilot.html#timeline", "November sessions, early December showcase"],
+    ["Weekly parent scorecard", "parents.html#scorecard", "Strengths-based, no ranks"],
+    ["For Students", "students.html", "Speak up, AI prompting, design in Canva or Figma"],
+    ["For Parents", "parents.html", "Outcomes, scorecard, safety, cost"],
+    ["Safety & safeguarding", "parents.html#safety", "POCSO-aligned policy, two-adult rule, consent, supervised AI"],
+    ["For Institutes (schools)", "institutes.html", "Host a pilot cohort, no lab purchase, trained facilitators"],
+    ["NEP 2020 & CBSE alignment", "institutes.html#alignment", "Skill modules, AI, design thinking"],
+    ["Host a cohort", "institutes.html#pilot", "Shortlist, 5–7 sessions, showcase, review"],
+    ["Programs", "programs.html", "The pilot, the 2027 school programme, holiday cohorts"],
+    ["What comes after", "programs.html#after", "Weekly school programme from 2027, holiday cohorts"],
+    ["Wider curriculum", "programs.html#tracks", "Human Intelligence, AI, Robotics, Building, Design, Public Speaking, Problem Solving, Entrepreneurship"],
+    ["Session outline", "curriculum.html", "Speak up, Ask well, Spot a need, Design it, Pitch it, Showcase"],
     ["About Us", "about.html", "Mission, the Prometheus story, philosophy, team"],
-    ["The Fire of Knowledge", "about.html#story", "Prometheus, the Titan who brought fire"],
-    ["Get Started / Register", "register.html", "Apply, enquire, partner with us, contact"],
-    ["FAQ", "register.html#faq", "Dates, fees, location, ages, what to bring"],
-    ["Contact", "mailto:hello@promethia.live", "hello@promethia.live"]
+    ["Contact", "register.html", "Enquire as a parent, school or mentor"],
+    ["FAQ", "register.html#faq", "Dates, cost, location, ages"]
   ];
   var sd = document.getElementById("search-dialog");
   var si = document.getElementById("search-input");
@@ -91,7 +86,7 @@
       var hits = INDEX.filter(function (r) { return !q || (r[0] + " " + r[2]).toLowerCase().indexOf(q) > -1; });
       sr.innerHTML = hits.length ? hits.slice(0, 9).map(function (r) {
         return '<li><a href="' + r[1] + '"><b>' + esc(r[0]) + "</b><small>" + esc(r[2]) + "</small></a></li>";
-      }).join("") : '<li class="empty">No matches. Try “safety”, “robotics” or “Demo Day”, or email hello@promethia.live.</li>';
+      }).join("") : '<li class="empty">No matches. Try “pilot”, “safety” or “scorecard”, or email hello@promethia.live.</li>';
     };
     var sm = modal(sd, function () { render(); si.focus(); }, function () { si.value = ""; });
     document.querySelectorAll("[data-search-open]").forEach(function (b) {
