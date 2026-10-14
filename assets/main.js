@@ -208,3 +208,25 @@
     });
   }
 })();
+
+/* Domain cards: open a detail dialog on click, Enter or Space. Esc closes (native dialog). */
+(function () {
+  document.querySelectorAll(".dcard[data-dialog]").forEach(function (card) {
+    var dlg = document.getElementById(card.getAttribute("data-dialog"));
+    if (!dlg || typeof dlg.showModal !== "function") return;
+    var btn = card.querySelector(".dcard-btn");
+    function open() { dlg.showModal(); document.documentElement.classList.add("dlg-open"); }
+    card.addEventListener("click", function (e) { if (e.target.closest("a")) return; open(); });
+    dlg.addEventListener("close", function () { document.documentElement.classList.remove("dlg-open"); if (btn) btn.focus(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg || e.target.closest("[data-close]")) dlg.close(); });
+  });
+})();
+
+/* Stagger reveal for siblings in grids */
+(function () {
+  document.querySelectorAll(".reveal").forEach(function (el) {
+    var p = el.parentElement; if (!p) return;
+    var sibs = Array.prototype.filter.call(p.children, function (c) { return c.classList && c.classList.contains("reveal"); });
+    var i = sibs.indexOf(el); if (i > 0) el.style.transitionDelay = Math.min(i, 6) * 70 + "ms";
+  });
+})();
