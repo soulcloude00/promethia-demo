@@ -16,9 +16,11 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;family=Caveat:wght@600;700&amp;display=swap">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/v3.css">
 <script src="assets/main.js" defer></script>
+<script src="assets/promo.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -48,7 +50,7 @@
     <div class="page-hero-copy">
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Session outline</li></ol></nav>
       <p class="eyebrow">Curriculum · Pilot 2026</p>
-      <h1>Seven sessions, <span class="hl">one at a time.</span></h1>
+      <h1>Seven sessions, <span class="script">one step<svg class="squiggle" viewBox="0 0 220 22" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 5, 75 19, 112 10 S 182 4, 217 13"/></svg></span> at a time</h1>
       <p class="lead">What pilot students make and practise in each session, for Grades 5–6 and Grades 7–8. Sessions run on school weekdays in November, about 60–90 minutes each.</p>
       <div class="btn-row"><a class="btn btn-primary" href="pilot.html">About the pilot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="programs.html">All programs</a></div>
     </div>
@@ -89,7 +91,7 @@
 </section>
 <section class="section section-white">
   <div class="container">
-    <div class="sec-head center ">
+    <div id="scorecard-c"></div><div class="sec-head center ">
   <p class="eyebrow">The scorecard</p>
   <h2>Five strengths. Scored on evidence.</h2>
   <p class="lead">Levels: Starting · Growing · Strong · Soaring. Shared privately with parents every week. Each child is compared only with their own start. No ranks.</p>
@@ -154,5 +156,16 @@
     <ul id="search-results" class="search-results" aria-live="polite"></ul>
   </div>
 </div>
+<aside class="promo" id="promo" aria-label="Promo, your guide to this site">
+  <div class="promo-bubble" id="promo-bubble" role="status" aria-live="polite">
+    <button class="promo-x" type="button" data-promo-min aria-label="Minimise Promo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="promo-t"></p><p class="promo-b"></p>
+    <div class="promo-actions"><a class="promo-link" href="#"></a><button type="button" class="promo-next" data-promo-next>Next tip</button></div>
+  </div>
+  <button class="promo-avatar" type="button" data-promo-toggle aria-label="Show Promo's tip" aria-expanded="true">
+    <img src="assets/promo.webp" width="96" height="97" alt="">
+  </button>
+  <script type="application/json" id="promo-tips">[{"t": "Session by session", "b": "Each card shows what Grades 5\u20136 and 7\u20138 do in that session.", "h": "#week-1", "l": "Start at session 1"}, {"t": "How progress is shown", "b": "The scorecard section is at the bottom.", "h": "#scorecard-c", "l": "See the scorecard"}]</script>
+</aside>
 </body>
 </html>

@@ -16,9 +16,11 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;family=Caveat:wght@600;700&amp;display=swap">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/v3.css">
 <script src="assets/main.js" defer></script>
+<script src="assets/promo.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -88,5 +90,16 @@
     <ul id="search-results" class="search-results" aria-live="polite"></ul>
   </div>
 </div>
+<aside class="promo" id="promo" aria-label="Promo, your guide to this site">
+  <div class="promo-bubble" id="promo-bubble" role="status" aria-live="polite">
+    <button class="promo-x" type="button" data-promo-min aria-label="Minimise Promo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="promo-t"></p><p class="promo-b"></p>
+    <div class="promo-actions"><a class="promo-link" href="#"></a><button type="button" class="promo-next" data-promo-next>Next tip</button></div>
+  </div>
+  <button class="promo-avatar" type="button" data-promo-toggle aria-label="Show Promo's tip" aria-expanded="true">
+    <img src="assets/promo.webp" width="96" height="97" alt="">
+  </button>
+  <script type="application/json" id="promo-tips">[{"t": "Hi, I'm Promo!", "b": "Lost? The 2026 pilot page is a good place to start.", "h": "pilot.html", "l": "See the pilot"}]</script>
+</aside>
 </body>
 </html>

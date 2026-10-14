@@ -16,9 +16,11 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;family=Caveat:wght@600;700&amp;display=swap">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/v3.css">
 <script src="assets/main.js" defer></script>
+<script src="assets/promo.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -48,7 +50,7 @@
     <div class="page-hero-copy">
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">For Students</li></ol></nav>
       <p class="eyebrow">For Students</p>
-      <h1>Speak up. Ask smart. <span class="hl">Make it real.</span></h1>
+      <h1>Speak up. Ask smart. <span class="script">Make it real.<svg class="squiggle" viewBox="0 0 220 22" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 5, 75 19, 112 10 S 182 4, 217 13"/></svg></span></h1>
       <p class="lead">In the pilot you'll practise talking to a room, learn how to get good answers out of AI (and catch it when it's wrong), and design things in Canva or Figma. Then you present it all at the showcase.</p>
       <div class="btn-row"><a class="btn btn-primary" href="pilot.html#shortlisting">How to get in <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="curriculum.html">What you'll do</a></div>
     </div>
@@ -151,5 +153,16 @@
     <ul id="search-results" class="search-results" aria-live="polite"></ul>
   </div>
 </div>
+<aside class="promo" id="promo" aria-label="Promo, your guide to this site">
+  <div class="promo-bubble" id="promo-bubble" role="status" aria-live="polite">
+    <button class="promo-x" type="button" data-promo-min aria-label="Minimise Promo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="promo-t"></p><p class="promo-b"></p>
+    <div class="promo-actions"><a class="promo-link" href="#"></a><button type="button" class="promo-next" data-promo-next>Next tip</button></div>
+  </div>
+  <button class="promo-avatar" type="button" data-promo-toggle aria-label="Show Promo's tip" aria-expanded="true">
+    <img src="assets/promo.webp" width="96" height="97" alt="">
+  </button>
+  <script type="application/json" id="promo-tips">[{"t": "Hey, builder!", "b": "Here's what you'll do in each session.", "h": "curriculum.html", "l": "See the sessions"}, {"t": "Want in?", "b": "It starts with a short game in your computer lab.", "h": "pilot.html#shortlisting", "l": "How to get in"}]</script>
+</aside>
 </body>
 </html>

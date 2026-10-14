@@ -16,9 +16,11 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;family=Caveat:wght@600;700&amp;display=swap">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/v3.css">
 <script src="assets/main.js" defer></script>
+<script src="assets/promo.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -48,7 +50,7 @@
     <div class="page-hero-copy">
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">For Parents</li></ol></nav>
       <p class="eyebrow">For Parents</p>
-      <h1>Progress you can <span class="hl">see and hear.</span></h1>
+      <h1>Progress you can <span class="script">see and hear<svg class="squiggle" viewBox="0 0 220 22" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 5, 75 19, 112 10 S 182 4, 217 13"/></svg></span></h1>
       <p class="lead">In the pilot, your child practises speaking up, using AI carefully and designing for real people, in school, with adults you can trust. Every week you get a short note on what they did well and what's next.</p>
       <div class="btn-row"><a class="btn btn-primary" href="pilot.html#scorecard">See the weekly scorecard <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="#safety">How we keep children safe</a></div>
     </div>
@@ -100,14 +102,14 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container faq-layout">
-    <div class="reveal"><div class="sec-head ">
+<section class="section" id="faq">
+  <div class="container">
+    <div class="sec-head center ">
   <p class="eyebrow">Questions parents ask</p>
   <h2>Straight answers.</h2>
   
-</div></div>
-    <div class="faq"><details class="reveal"><summary>Does it cost anything?</summary><div class="ans"><p>The pilot is mostly free. At most, families cover materials. Some cohorts may ask for a small refundable deposit to hold a seat, returned at the end.</p></div></details><details class="reveal"><summary>How are students chosen?</summary><div class="ans"><p>Students play a short game called Mind Expedition in the school computer lab. Along with teacher input, it helps us form a group of 30–50. It isn't an exam, and it doesn't rank anyone.</p></div></details><details class="reveal"><summary>My child is shy. Will they have to present?</summary><div class="ans"><p>Every child presents, at their own pace: in pairs, with a prop or from their seat at first. Growth is measured against their own start.</p></div></details><details class="reveal"><summary>Will you try to sell me something?</summary><div class="ans"><p>No. We send the weekly scorecard and reply to your questions. No sales calls.</p></div></details></div>
+</div>
+    <div class="faq-pills"><details class="reveal"><summary><span>Does it cost anything?</span><i aria-hidden="true"></i></summary><div class="ans"><p>The pilot is mostly free. At most, families cover materials. Some cohorts may ask for a small refundable deposit to hold a seat, returned at the end.</p></div></details><details class="reveal"><summary><span>How are students chosen?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Students play a short game called Mind Expedition in the school computer lab. Along with teacher input, it helps us form a group of 30–50. It isn't an exam, and it doesn't rank anyone.</p></div></details><details class="reveal"><summary><span>My child is shy. Will they have to present?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Every child presents, at their own pace: in pairs, with a prop or from their seat at first. Growth is measured against their own start.</p></div></details><details class="reveal"><summary><span>Will you try to sell me something?</span><i aria-hidden="true"></i></summary><div class="ans"><p>No. We send the weekly scorecard and reply to your questions. No sales calls.</p></div></details></div>
   </div>
 </section>
 <section class="section section-cta">
@@ -163,5 +165,16 @@
     <ul id="search-results" class="search-results" aria-live="polite"></ul>
   </div>
 </div>
+<aside class="promo" id="promo" aria-label="Promo, your guide to this site">
+  <div class="promo-bubble" id="promo-bubble" role="status" aria-live="polite">
+    <button class="promo-x" type="button" data-promo-min aria-label="Minimise Promo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="promo-t"></p><p class="promo-b"></p>
+    <div class="promo-actions"><a class="promo-link" href="#"></a><button type="button" class="promo-next" data-promo-next>Next tip</button></div>
+  </div>
+  <button class="promo-avatar" type="button" data-promo-toggle aria-label="Show Promo's tip" aria-expanded="true">
+    <img src="assets/promo.webp" width="96" height="97" alt="">
+  </button>
+  <script type="application/json" id="promo-tips">[{"t": "The scorecard", "b": "Here's what you'll get each week: strengths, evidence, one next step.", "h": "#scorecard", "l": "See the scorecard"}, {"t": "Safety first", "b": "Our safeguarding standards are listed on this page.", "h": "#safety", "l": "Read the standards"}, {"t": "Still unsure?", "b": "The FAQ covers cost, shortlisting and shy kids.", "h": "#faq", "l": "Open the FAQ"}]</script>
+</aside>
 </body>
 </html>
